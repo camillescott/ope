@@ -50,6 +50,9 @@ clean-test: ## remove test and coverage artifacts
 lint: ## check style with flake8
 	flake8 fuckitall tests
 
+version:
+	python version.py > fuckitall/VERSION
+
 test: ## run tests quickly with the default Python
 	pytest
 
@@ -76,10 +79,10 @@ servedocs: docs ## compile the docs watching for changes
 release: dist ## package and upload a release
 	twine upload dist/*
 
-dist: clean ## builds source and wheel package
+dist: clean version ## builds source and wheel package
 	python setup.py sdist
 	python setup.py bdist_wheel
 	ls -l dist
 
-install: clean ## install the package to the active Python's site-packages
+install: clean version ## install the package to the active Python's site-packages
 	python setup.py install
