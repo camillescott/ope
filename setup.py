@@ -15,7 +15,7 @@ with open('HISTORY.rst') as history_file:
 __version__ = get_version()
 
 with open('fuckitall/VERSION', 'w') as version_file:
-    version_file.write(__version__)
+    print(__version__, file=version_file)
 
 requirements = ['Click>=7.0', 'numpy', 'pandas', 'screed']
 
