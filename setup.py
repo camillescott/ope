@@ -4,14 +4,18 @@
 
 from setuptools import setup, find_packages
 
+from version import get_version
+
 with open('README.rst') as readme_file:
     readme = readme_file.read()
 
 with open('HISTORY.rst') as history_file:
     history = history_file.read()
 
-with open('fuckitall/VERSION') as version_file:
-    version = version_file.read().strip()
+__version__ = get_version()
+
+with open('fuckitall/VERSION', 'w') as version_file:
+    version_file.write(__version__)
 
 requirements = ['Click>=7.0', 'numpy', 'pandas', 'screed']
 
@@ -50,6 +54,6 @@ setup(
     test_suite='tests',
     tests_require=test_requirements,
     url='https://github.com/camillescott/fuckitall',
-    version=version,
+    version=__version__,
     zip_safe=False,
 )
