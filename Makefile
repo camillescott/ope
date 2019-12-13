@@ -56,7 +56,7 @@ version:
 test: ## run tests quickly with the default Python
 	pytest
 
-test-all: ## run tests on every Python version with tox
+test-all: version ## run tests on every Python version with tox
 	tox
 
 coverage: ## check code coverage quickly with the default Python
