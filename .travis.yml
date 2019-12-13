@@ -1,14 +1,19 @@
 # Config file for automatic testing at travis-ci.org
-
+dist: bionic
+sudo: required
 language: python
 python:
   - 3.8
   - 3.7
   - 3.6
-  - 3.5
 
 # Command to install dependencies, e.g. pip install -r requirements.txt --use-mirrors
-install: pip install -U tox-travis
+install:
+  - pip install -U tox-travis tox-conda
+  - curl -OL https://osf.io/5jzre/download > tests/test-data/Pfam-A.hmm.h3f
+  - curl -OL https://osf.io/s6xtb/download > tests/test-data/Pfam-A.hmm.h3i
+  - curl -OL https://osf.io/2jnas/download > tests/test-data/Pfam-A.hmm.h3m
+  - curl -OL https://osf.io/8yt9r/download > tests/test-data/Pfam-A.hmm.h3p
 
 # Command to run tests, e.g. python setup.py test
 script: tox
