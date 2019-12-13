@@ -1,38 +1,29 @@
-# Config file for automatic testing at travis-ci.org
 dist: bionic
 sudo: required
 language: python
 python:
-  - 3.8
-  - 3.7
-  - 3.6
-
-# Command to install dependencies, e.g. pip install -r requirements.txt --use-mirrors
+- 3.8
+- 3.7
+- 3.6
 install:
-  - wget https://repo.continuum.io/miniconda/Miniconda3-latest-Linux-x86_64.sh -O miniconda.sh && bash miniconda.sh -b -p $HOME/miniconda
-  - export PATH="$HOME/miniconda/bin:$PATH"
-  - conda config --set always_yes yes --set changeps1 no
-  - conda update -q conda
-  - conda info -a
-  - pip install -U tox-travis tox-conda
-  - curl -L https://osf.io/5jzre/download > tests/test-data/Pfam-A.hmm.h3f
-  - curl -L https://osf.io/s6xtb/download > tests/test-data/Pfam-A.hmm.h3i
-  - curl -L https://osf.io/2jnas/download > tests/test-data/Pfam-A.hmm.h3m
-  - curl -L https://osf.io/8yt9r/download > tests/test-data/Pfam-A.hmm.h3p
-
-# Command to run tests, e.g. python setup.py test
+- wget https://repo.continuum.io/miniconda/Miniconda3-latest-Linux-x86_64.sh -O miniconda.sh
+  && bash miniconda.sh -b -p $HOME/miniconda
+- export PATH="$HOME/miniconda/bin:$PATH"
+- conda config --set always_yes yes --set changeps1 no
+- conda update -q conda
+- conda info -a
+- pip install -U tox-travis tox-conda
+- curl -L https://osf.io/5jzre/download > tests/test-data/Pfam-A.hmm.h3f
+- curl -L https://osf.io/s6xtb/download > tests/test-data/Pfam-A.hmm.h3i
+- curl -L https://osf.io/2jnas/download > tests/test-data/Pfam-A.hmm.h3m
+- curl -L https://osf.io/8yt9r/download > tests/test-data/Pfam-A.hmm.h3p
 script: tox
-
-# Assuming you have installed the travis-ci CLI tool, after you
-# create the Github repo and add it to Travis, run the
-# following command to finish PyPI deployment setup:
-# $ travis encrypt --add deploy.password
 deploy:
   provider: pypi
   distributions: sdist bdist_wheel
   user: camillescott
   password:
-    secure: PLEASE_REPLACE_ME
+    secure: ZfcOJSWW3UTVgshbPyGFhN+ZwFzP+OOBhxNKe38lGb/Cr/kZWhACVCp2lYcpxfN20lkELv2/72uNkFSGqfCE5iWDE6L6l1JrkA/D7tUUgCrjvULLC/Jc7+J7lyROaEJpBbt7Gsxy3ZadyB9F2iHEm+Utsu7wCIM6Sj90Y8h5hiaqVDVFy63uEOgnVRrfFwAM4TuQy/cutIH/UtWUhm3hOWWW2YYujCmHYb394uWRNhhOXumiOtnkpSy/hBLI0XwehAOrKL+69+6onlKAfJDmd5goYbD9b6ht4kXV1KlibQLQwI+WwgZzk+5PaCtr0Z7LZTivFKzO6WXq0cyT4Bb7BT3+RmPTmfNqKkaO7zlRByn6Rv8TMUy5RCqy+mGzYmGq4FuUPbDTZbGMBSjmXa4jZUVxUhgZyH0DtkMd4XFBWh7eDKaujeVZGVzGScrvKbq+We1WY8BnnSyguAgb4GOB6QWtufA/R8U/+BRLTGU91CwykZ0WxPdoTyGzW9StRE2JJqDEf0V6oSZG71stFeTPxLPUg7godL48EG8VjC7o0vG6UK5RQUv2GC8LjjqS7OIUwNnlsqtAmerEl/HPlDQYprh489GIp1fx62KL08s9Oc0Nb7jA6Z77uHgToJDDtNU8r0Sw5v8yNrFNeDLK+5jUPEPvSS1Mpyl1raODLDgOnHQ=
   on:
     tags: true
     repo: camillescott/fuckitall
