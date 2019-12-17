@@ -17,6 +17,7 @@ install:
 - curl -L https://osf.io/s6xtb/download > tests/test-data/Pfam-A.hmm.h3i
 - curl -L https://osf.io/2jnas/download > tests/test-data/Pfam-A.hmm.h3m
 - curl -L https://osf.io/8yt9r/download > tests/test-data/Pfam-A.hmm.h3p
+- make version
 script: tox
 deploy:
   provider: pypi

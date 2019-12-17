@@ -12,10 +12,8 @@ with open('README.rst') as readme_file:
 with open('HISTORY.rst') as history_file:
     history = history_file.read()
 
-__version__ = get_version()
-
-with open('fuckitall/VERSION', 'w') as version_file:
-    print(__version__, file=version_file)
+with open('fuckitall/VERSION') as version_file:
+    __version__ = version_file.read().strip()
 
 requirements = ['Click>=7.0', 'numpy', 'pandas', 'screed']
 
