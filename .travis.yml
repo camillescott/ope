@@ -20,6 +20,7 @@ install:
 - make version
 script: tox
 deploy:
+  skip_cleanup: true
   provider: pypi
   distributions: sdist bdist_wheel
   user: camillescott
