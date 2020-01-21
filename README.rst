@@ -13,6 +13,17 @@ ope
         :target: https://ope.readthedocs.io/en/latest/?badge=latest
         :alt: Documentation Status
 
+
+Abstracts away running `gnu-parallel` on tools with FASTA input and provides parsers for some common
+formats produced by said tools.
+
+Example usage::
+
+   ope parallel -j 4 [query.pep.fa] hmmscan --domtblout [results.tbl] -E 1e-05 -o /dev/null /store/biodb/Pfam-A.hmm /dev/stdin
+
+Hence, the only `gnu-parallel` flag one needs to worry about is `-j` for the number of cores to use.
+Note that you also need to set the input in the actual tool invocation as `/dev/stdin`.
+
 * Free software: MIT license
 * Documentation: https://ope.readthedocs.io.
 
