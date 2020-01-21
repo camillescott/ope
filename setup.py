@@ -12,7 +12,7 @@ with open('README.rst') as readme_file:
 with open('HISTORY.rst') as history_file:
     history = history_file.read()
 
-with open('fuckitall/VERSION') as version_file:
+with open('ope/VERSION') as version_file:
     __version__ = version_file.read().strip()
 
 requirements = ['Click>=7.0', 'numpy', 'pandas', 'screed']
@@ -38,20 +38,20 @@ setup(
     description="Do you need to run tools on FASTA files with gnu parallel, and then parse the results? You need prescription strength Fuckitall!",
     entry_points={
         'console_scripts': [
-            'fuckitall=fuckitall.cli:main',
+            'ope=ope.cli:main',
         ],
     },
     install_requires=requirements,
     license="MIT license",
     long_description=readme + '\n\n' + history,
     include_package_data=True,
-    keywords='fuckitall',
-    name='fuckitall',
-    packages=find_packages(include=['fuckitall', 'fuckitall.*']),
+    keywords='ope',
+    name='ope',
+    packages=find_packages(include=['ope', 'ope.*']),
     setup_requires=setup_requirements,
     test_suite='tests',
     tests_require=test_requirements,
-    url='https://github.com/camillescott/fuckitall',
+    url='https://github.com/camillescott/ope',
     version=__version__,
     zip_safe=False,
 )

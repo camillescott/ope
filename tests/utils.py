@@ -9,7 +9,7 @@
 import os
 import subprocess
 
-from fuckitall.io.hmmer import HMMerParser
+from ope.io.hmmer import HMMerParser
 
 
 def hmmscan_cmd(input_filename, database_filename, output_filename):

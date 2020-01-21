@@ -8,13 +8,13 @@ Installation
 Stable release
 --------------
 
-To install fuckitall, run this command in your terminal:
+To install ope, run this command in your terminal:
 
 .. code-block:: console
 
-    $ pip install fuckitall
+    $ pip install ope
 
-This is the preferred method to install fuckitall, as it will always install the most recent stable release.
+This is the preferred method to install ope, as it will always install the most recent stable release.
 
 If you don't have `pip`_ installed, this `Python installation guide`_ can guide
 you through the process.
@@ -26,19 +26,19 @@ you through the process.
 From sources
 ------------
 
-The sources for fuckitall can be downloaded from the `Github repo`_.
+The sources for ope can be downloaded from the `Github repo`_.
 
 You can either clone the public repository:
 
 .. code-block:: console
 
-    $ git clone git://github.com/camillescott/fuckitall
+    $ git clone git://github.com/camillescott/ope
 
 Or download the `tarball`_:
 
 .. code-block:: console
 
-    $ curl -OJL https://github.com/camillescott/fuckitall/tarball/master
+    $ curl -OJL https://github.com/camillescott/ope/tarball/master
 
 Once you have a copy of the source, you can install it with:
 
@@ -47,5 +47,5 @@ Once you have a copy of the source, you can install it with:
     $ python setup.py install
 
 
-.. _Github repo: https://github.com/camillescott/fuckitall
-.. _tarball: https://github.com/camillescott/fuckitall/tarball/master
+.. _Github repo: https://github.com/camillescott/ope
+.. _tarball: https://github.com/camillescott/ope/tarball/master

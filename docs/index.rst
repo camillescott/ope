@@ -1,4 +1,4 @@
-Welcome to fuckitall's documentation!
+Welcome to ope's documentation!
 ======================================
 
 .. toctree::

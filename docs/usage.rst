@@ -2,6 +2,6 @@
 Usage
 =====
 
-To use fuckitall in a project::
+To use ope in a project::
 
-    import fuckitall
+    import ope

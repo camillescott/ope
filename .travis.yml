@@ -28,5 +28,5 @@ deploy:
     secure: eOaB5fQkbHvfK7c5Ph1T/L75VqL3KZbSoMT/goryHp1gzPSa+6/x24E6odkX6ahR71aSkcbfhyIQURqO2c+eQAXmCys4/ogpXnGCmwlJnQq61e2o02S5/dTQuqdwWx/42RurW5CiMfqxEJpEToF33xcgAaf/Bd0mu/57aa/91UkCQUSHQaBmJ83jb+iYVYHovE4mC8i792y9DD1UwAMVCkjXOotXJefOjXtJyor7Dl8K3dD67gOJ2H3FLcGJcEoYKx/Ruz87iUNXoBK2joFUg9GlUMVfqWlTmyM2RHdd5CmkTC2iHyAU0/XanlWVW/pcNNEpFapy3zA3eZoBQk2fL53cv2NACWSPDj4homLJDaHoS53JIJoB7aDpWdU1ADx8ERmfY0QSq/Ut6YN2R6NS6lFAS2yq4ppo2e9UKhHVdxD3Dd+c9JkkdJnowSuW2/WOzQlr0uYfi3oigXpxrDl2qh9HTRZR0hhIvedFq5st5FnaaUDqLdu2e0w2iiW3OhfEj4yTw6D65s8FKlngA17lj4yb/hbYysvTPlIcSYA5kgtx/4vLxntsTsBpStCW2HurAFIhzIrNQwuVlf0XGbFH1uAy3O11g6gbFy+SpxqOG4OMD4aWBIzBAx23r0tJ6y5MSQVEnydxoErXC/Kcwm+AyImN4HmJQOk0ddHz8oTFuY4=
   on:
     tags: true
-    repo: camillescott/fuckitall
+    repo: camillescott/ope
     python: 3.8

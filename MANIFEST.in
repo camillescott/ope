@@ -3,7 +3,7 @@ include CONTRIBUTING.rst
 include HISTORY.rst
 include LICENSE
 include README.rst
-include fuckitall/VERSION
+include ope/VERSION
 
 exclude tests/test-data/Pfam-A.*
 include tests/test-data/query.100.pep.fa

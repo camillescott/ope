@@ -18,7 +18,7 @@ def test_parallel_pipepart(pfam, tmpdir, datadir, query_x_pfam, n_threads):
     par_output = 'parallel.tbl'
 
     with tmpdir.as_cwd():
-        par_cmd = ['fuckitall',
+        par_cmd = ['ope',
                    'parallel',
                    '-j',
                    n_threads,

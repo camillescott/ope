@@ -1,26 +1,20 @@
 =========
-fuckitall
+ope
 =========
 
 
-.. image:: https://img.shields.io/pypi/v/fuckitall.svg
-        :target: https://pypi.python.org/pypi/fuckitall
+.. image:: https://img.shields.io/pypi/v/ope.svg
+        :target: https://pypi.python.org/pypi/ope
 
-.. image:: https://img.shields.io/travis/camillescott/fuckitall.svg
-        :target: https://travis-ci.org/camillescott/fuckitall
+.. image:: https://img.shields.io/travis/camillescott/ope.svg
+        :target: https://travis-ci.org/camillescott/ope
 
-.. image:: https://readthedocs.org/projects/fuckitall/badge/?version=latest
-        :target: https://fuckitall.readthedocs.io/en/latest/?badge=latest
+.. image:: https://readthedocs.org/projects/ope/badge/?version=latest
+        :target: https://ope.readthedocs.io/en/latest/?badge=latest
         :alt: Documentation Status
 
-
-
-
-Do you need to run tools on FASTA files with gnu parallel, and then parse the results? You need prescription strength Fuckitall!
-
-
 * Free software: MIT license
-* Documentation: https://fuckitall.readthedocs.io.
+* Documentation: https://ope.readthedocs.io.
 
 
 Features

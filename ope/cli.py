@@ -1,4 +1,4 @@
-"""Console script for fuckitall."""
+"""Console script for ope."""
 
 import subprocess
 import sys

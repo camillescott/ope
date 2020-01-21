@@ -1,1 +1,1 @@
-"""Unit test package for fuckitall."""
+"""Unit test package for ope."""
