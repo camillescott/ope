@@ -21,23 +21,24 @@ from os.path import dirname, isdir, join
 import os
 import re
 import subprocess
+import sys
 
 version_re = re.compile('^Version: (.+)$', re.M)
 
 
-def get_version(cmake=False):
+def get_version(cmake=False, fallback=None):
     d = dirname(__file__)
 
     version = []
 
-    if isdir(join(d, '.git')):
+    try:
         # Get the version using "git describe".
         cmd = 'git describe --tags'.split()
         try:
             tag = subprocess.check_output(cmd).decode().strip()
         except subprocess.CalledProcessError:
-            print('Unable to get version number from git tags')
-            exit(1)
+            print('Unable to get version number from git tags', file=sys.stderr)
+            raise
         if cmake:
             tag = tag.strip('v')
 
@@ -65,8 +66,8 @@ def get_version(cmake=False):
         try:
             dirty = subprocess.check_output(cmd).decode().strip()
         except subprocess.CalledProcessError:
-            print('Unable to get git index status')
-            exit(1)
+            print('Unable to get git index status', file=sys.stderr)
+            raise
 
         if dirty != '':
             if not cmake:
@@ -74,9 +75,12 @@ def get_version(cmake=False):
             else:
                 version.append('1')
 
-    else:
-        print('Not a git repo!')
-        exit(1)
+    except:
+        if fallback is not None:
+            with open(fallback) as fp:
+                version.extend(fp.read().split())
+        else:
+            exit(1)
 
     return '.'.join(version)
 
@@ -84,6 +88,7 @@ def get_version(cmake=False):
 if __name__ == '__main__':
     parser = argparse.ArgumentParser()
     parser.add_argument('--cmake', action='store_true', default=False)
+    parser.add_argument('--fallback', default=None)
     args = parser.parse_args()
 
-    print(get_version(cmake=args.cmake))
+    print(get_version(cmake=args.cmake, fallback=args.fallback))

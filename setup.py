@@ -35,7 +35,7 @@ setup(
         'Programming Language :: Python :: 3.7',
         'Programming Language :: Python :: 3.8',
     ],
-    description="Do you need to run tools on FASTA files with gnu parallel, and then parse the results? You need prescription strength Fuckitall!",
+    description="Abstracts away running gnu-parallel on tools with FASTA input and provides parsers for some common formats produced by said tools.",
     entry_points={
         'console_scripts': [
             'ope=ope.cli:main',
