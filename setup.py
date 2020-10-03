@@ -16,10 +16,7 @@ with open('ope/VERSION') as version_file:
     __version__ = version_file.read().strip()
 
 requirements = ['Click>=7.0', 'numpy', 'pandas', 'screed']
-
-setup_requirements = ['pytest-runner', ]
-
-test_requirements = ['pytest>=3', ]
+test_requirements = ['pytest>=3', 'pytest-runner']
 
 setup(
     author="Camille Scott",
@@ -48,7 +45,6 @@ setup(
     keywords='ope',
     name='ope',
     packages=find_packages(include=['ope', 'ope.*']),
-    setup_requires=setup_requirements,
     test_suite='tests',
     tests_require=test_requirements,
     url='https://github.com/camillescott/ope',
