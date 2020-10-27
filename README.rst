@@ -2,6 +2,8 @@
 ope
 =========
 
+.. image:: https://img.shields.io/badge/install%20with-bioconda-brightgreen.svg?style=flat
+        :target: http://bioconda.github.io/recipes/ope/README.html
 
 .. image:: https://img.shields.io/pypi/v/ope.svg
         :target: https://pypi.python.org/pypi/ope
